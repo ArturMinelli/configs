@@ -128,9 +128,6 @@ export NVM_DIR="$HOME/.nvm"
 . "$HOME/.cargo/env"
 
 # Path
-export PATH=$PATH:/home/artur/.local/bin
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:/opt/nvim-linux64/bin
 
 # Zoxide configuration
 eval "$(zoxide init bash --cmd z)"
@@ -143,8 +140,6 @@ alias exp="explorer.exe"
 alias cat='batcat -p --paging=never'
 alias s='nvim $(fzf --preview "bat --color=always --style=numbers --line-range=:500 {}")'
 alias cd="z"
-alias trl="ssh arturpeixoto@api.trilhasbr.com"
-alias db="pgcli -h localhost -p 15493 --password -u postgres -d trilhasbr_db"
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
