@@ -15,7 +15,7 @@
 
   home.file = {
     ".tmux.conf".source = ~/configs/tmux.conf;
-    ".bashrc".source = ~/configs/bash.sh;
+    ".bashrc".source = ~/configs/bashrc.sh;
   };
 
   home.file = {
