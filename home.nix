@@ -27,8 +27,11 @@
     };
   };
 
-  home.sessionVariables = {
-    ZOXIDE_INIT = "eval \"\$(zoxide init bash --cmd cd)\"";  # Initialize zoxide for bash
+  home.file = {
+    ".bashrc".source = ''
+      # Initialize zoxide
+      eval "$(zoxide init bash)"
+    '';
   };
 
   programs.home-manager.enable = true;
