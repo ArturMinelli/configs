@@ -11,6 +11,7 @@
     pkgs.neovim
     pkgs.bat
     pkgs.tmux
+    pkgs.cargo
   ];
 
   home.file = {
