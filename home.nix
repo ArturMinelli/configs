@@ -15,7 +15,6 @@
 
   home.file = {
     ".tmux.conf".source = ~/configs/tmux.conf;
-    ".bashrc".source = ~/configs/bashrc.sh;
   };
 
   home.file = {
@@ -28,6 +27,14 @@
     };
   };
 
+  home.file.".bashrc" = {
+    text = ''
+      # Custom lines to append to .bashrc
+      export MY_VARIABLE="some_value"
+      alias ll="ls -l"
+      # Add any other lines you need here
+    '';
+  };
+
   programs.home-manager.enable = true;
-  programs.home-manager.backupFileExtension = "backup";
 }
