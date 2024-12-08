@@ -142,6 +142,8 @@ alias s='nvim $(fzf --preview "bat --color=always --style=numbers --line-range=:
 alias cd="z"
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  tmux source ~/configs/tmux.conf
+
   exec tmux
 fi
 
